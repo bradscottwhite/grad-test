@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/grad-test/static/css/main.2a68e646.css",
+    "main.js": "/grad-test/static/js/main.2362f2ba.js",
+    "static/js/787.2cc0be38.chunk.js": "/grad-test/static/js/787.2cc0be38.chunk.js",
+    "index.html": "/grad-test/index.html",
+    "main.2a68e646.css.map": "/grad-test/static/css/main.2a68e646.css.map",
+    "main.2362f2ba.js.map": "/grad-test/static/js/main.2362f2ba.js.map",
+    "787.2cc0be38.chunk.js.map": "/grad-test/static/js/787.2cc0be38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a68e646.css",
+    "static/js/main.2362f2ba.js"
+  ]
+}
