@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/grad-test/static/css/main.2a68e646.css",
-    "main.js": "/grad-test/static/js/main.2362f2ba.js",
+    "main.css": "/grad-test/static/css/main.a3a67017.css",
+    "main.js": "/grad-test/static/js/main.abe37783.js",
     "static/js/787.2cc0be38.chunk.js": "/grad-test/static/js/787.2cc0be38.chunk.js",
     "index.html": "/grad-test/index.html",
-    "main.2a68e646.css.map": "/grad-test/static/css/main.2a68e646.css.map",
-    "main.2362f2ba.js.map": "/grad-test/static/js/main.2362f2ba.js.map",
+    "main.a3a67017.css.map": "/grad-test/static/css/main.a3a67017.css.map",
+    "main.abe37783.js.map": "/grad-test/static/js/main.abe37783.js.map",
     "787.2cc0be38.chunk.js.map": "/grad-test/static/js/787.2cc0be38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a68e646.css",
-    "static/js/main.2362f2ba.js"
+    "static/css/main.a3a67017.css",
+    "static/js/main.abe37783.js"
   ]
 }
