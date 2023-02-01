@@ -1,17 +1,39 @@
-//import bg from './beans-grad.jpg';
-//import bg from './rays-grad.png';
+import { useState, useEffect } from 'react';
 
 const App = () => {
+  const [ darkMode, setDarkMode ] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setDarkMode(false);
+    }
+  }, []);
+
+  const switchTheme = () => {
+    localStorage.theme = darkMode ? 'light' : 'dark';
+    document.documentElement.classList[darkMode ? 'remove' : 'add']('dark');
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div> {/*className='overflow-hidden bg-[#111827]'>*/}
-      {/*<div className='fixed w-screen h-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100' />*/}
-      <div className='fixed w-screen h-full bg-gradient-to-br from-lime-200 via-slate-100 to-teal-300' />
-      {/*<img src={bg} className='absolute -top-[1rem] left-1/2 -ml-[40rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]' alt='background'/>*/}
-      {/*<img src={bg} className='absolute' alt='background'/>*/}
+    <>
+      <div className='fixed w-screen h-full bg-gradient-to-br from-lime-200 via-slate-100 to-teal-300 dark:from-lime-500 dark:via-slate-400 dark:to-teal-400 animate-gradient-x' />
       <div className='relative flex justify-center items-center w-screen h-screen'>
-        <h1 className='font-extrabold text-5xl text-slate-800 drop-shadow-lg shadow-slate-500/50'>Check out this cool blur background gradient!!!</h1>
+        <div className='grid'>
+          <h1 className='font-extrabold text-5xl text-slate-800 dark:text-slate-100 drop-shadow-lg shadow-slate-500/50 shadow-slate-400/50'>Check out this cool blur background gradient!!!</h1>
+          <button
+            className='rounded-lg shadow-lg bg-teal-600 hover:bg-teal-700 bg-teal-500 dark:hover:bg-teal-400 py-4 my-6 px-2 mx-2 text-xl text-white dark:text-slate-800'
+            onClick={switchTheme}
+          >
+            {darkMode ? 'Set to Light Mode' : 'Set to Dark Mode'}
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
